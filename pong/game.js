@@ -186,9 +186,6 @@ function main() {
         ball.speed = ballSpeed;
     }
 
-    // serve first ball
-    ball.serve(getRandomInt(0, 1));
-
     // game loop function
     var loop = function() {
         window.requestAnimationFrame(loop, canvas);
@@ -206,6 +203,9 @@ function init() {
 
     playerB.x = gameWidth - paddleWidth;
     playerB.y = (gameHeight - paddleHeight)/2;
+
+    // serve first ball
+    ball.serve(getRandomInt(0, 1));
 }
 
 function update() {
